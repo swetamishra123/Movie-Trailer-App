@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Movie Trailer Search App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This is a simple web application that allows users to search for movie or web series trailers using the Movie Trailer API. Users can input the name of the movie or web series they are interested in, and the application will fetch the corresponding trailer from the internet and display it on the webpage.
 
-## Available Scripts
+## Prerequisites
+Before running the application, ensure you have the following installed:
 
-In the project directory, you can run:
+- React
+- React Hooks
+- JavaScript ES6
+- React Axios & API
+- Functional Components
 
-### `npm start`
+## Approach
+The application consists of two main sections:
+1. **Input Section:** This section allows users to input the name of the movie or web series they want to search for.
+2. **Video Display Section:** Here, the fetched trailer will be displayed.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+When a user searches for a video, the application will store the user input inside a state variable. Upon clicking the search button, a function will be called to fetch the required video URL using the `movie-trailer` package and store it in another state variable. Once the URL is obtained, the video will be rendered using the `ReactPlayer` component.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Setup
+Follow these steps to set up the project:
 
-### `npm test`
+### Step 1: Create React App
+Create a new React application using the following command:
+```bash
+npx create-react-app movie-app
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Step 2: Navigate to Project Folder
+Move to the project folder by running:
+```bash
+cd movie-app
+```
 
-### `npm run build`
+### Step 3: Install Required Packages
+Install the necessary npm packages for the project:
+```bash
+npm install movie-trailer
+npm install react-player
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
+1. After setting up the project, run the application using:
+   ```bash
+   npm start
+   ```
+2. Open your web browser and navigate to `http://localhost:3000`.
+3. Enter the name of the movie or web series you want to search for in the input field.
+4. Click on the search button.
+5. The trailer corresponding to the entered search query will be displayed on the webpage.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+This project is licensed under the [MIT License](LICENSE).
